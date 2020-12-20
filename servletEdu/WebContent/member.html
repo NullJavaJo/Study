@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Form Test</title>
+</head>
+<body>
+	<h3>회원 정보</h3>
+	<form action="queryTest2" method="post">	
+		<!-- GET방식의 특징
+				1. 전달되는 질의 문자열이 요청정보 헤더의 URI에 추가되어 전달됨
+				2. 전달되는 질의 문자열의 내용이 외부에 노출됨
+				3. 전달되는 질의 문자열의 길이가 제한적(255byte)
+				4. 전달되는 질의 문자열의 인코딩/디코딩 작업이 필요없어서 처리속도 빠름
+				5. 전달되는 질의 문자열을 직접 URI에 추가할 수 있음 ex. <a>에 링크 걸어줄때 -->
+		<!-- POST방식의 특징
+				1. 전달되는 질의 문자열이 요청정보의 몸체에 포함되어 전달됨
+				2. 전달되는 질의 문자열이 외부에 노출되지 않음
+				3. 전달되는 질의 문자열의 길이에 제한이 없음
+				4. <form>태그를 사용해야만 요청할 수 있음 -->
+			
+		
+		ID : <input type="text" name="id"/><br/>
+		비밀번호 : <input type="password" name="pwd"/><br/>
+		이름 : <input type="text" name="name"/><br/>
+		취미 : 
+			<input type="checkbox" name="hobby" value="climbing"/>등산
+			<input type="checkbox" name="hobby" value="sports"/>운동
+			<input type="checkbox" name="hobby" value="reading"/>독서
+			<input type="checkbox" name="hobby" value="traveling"/>여행<br/>
+		성별 : 
+			<input type="radio" name="gender" value="male"/>남자
+			<input type="radio" name="gender" value="female"/>여자<br/>
+		종교 : 
+			<select name="religion">
+				<option value="Chirsianity">기독교
+				<option value="Buddhism">불교
+				<option value="Catholicism">천주교
+				<option value="atheism">무교
+			</select><br/>
+		자기소개 :<br/>
+			<textarea cols="30" rows="10" name="introduction"></textarea><br/>
+			
+		<input type="submit" value="전송"/>
+		<input type="reset" value="지우기"/>
+	
+	</form>
+</body>
+</html>
